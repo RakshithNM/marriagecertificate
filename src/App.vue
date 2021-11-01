@@ -143,6 +143,10 @@ export default {
   height: 29.7cm;
 }
 
+.containerd > h3 {
+  font-size: 18px;
+}
+
 .centered {
   position: absolute;
   top: 45%;
