@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header class="no-print" title="MARRIAGE CERTIFICATE" subText="SHREE PERNE MUCHILOT BHAGAVATHI KSHETHRA"/>
+    <p style="color: red">This is a developement version and in progress, only available for selected people for review</p>
     <Form
       class="no-print"
       @name-change="updateNameGroom($event, 'groomName')"
