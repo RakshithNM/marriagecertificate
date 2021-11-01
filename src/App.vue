@@ -34,14 +34,14 @@
     <div class="containerd">
       <div class="centered">
         <div>
-          <h1>{{ nameGroom }}</h1>
+          <h1><strong>{{ nameGroom }}</strong></h1>
           <h3>{{ address1Groom }}</h3>
           <h3>{{ address2Groom }}</h3>
           <h3>{{ address3Groom }}</h3>
         </div>
         <h3 class="and">AND</h3>
         <div>
-          <h1>{{ nameBride }}</h1>
+          <h1><strong>{{ nameBride }}</strong></h1>
           <h3>{{ address1Bride }}</h3>
           <h3>{{ address2Bride }}</h3>
           <h3>{{ address3Bride }}</h3>
