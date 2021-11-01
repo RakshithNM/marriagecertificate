@@ -188,6 +188,10 @@ h1 {
   margin: 0 auto;
 }
 
+input {
+  margin-bottom: 20px;
+}
+
 @page {
   margin: 0;
 }
