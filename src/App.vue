@@ -39,7 +39,7 @@
           <h3>{{ address2Groom }}</h3>
           <h3>{{ address3Groom }}</h3>
         </div>
-        <h3>AND</h3>
+        <h3 class="and">AND</h3>
         <div>
           <h1>{{ nameBride }}</h1>
           <h3>{{ address1Bride }}</h3>
@@ -190,6 +190,11 @@ h1 {
 
 input {
   margin-bottom: 20px;
+}
+
+.and {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 @page {
