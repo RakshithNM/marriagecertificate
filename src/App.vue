@@ -1,32 +1,36 @@
 <template>
   <div id="app">
     <Header class="no-print" title="MARRIAGE CERTIFICATE" subText="SHREE PERNE MUCHILOT BHAGAVATHI KSHETHRA"/>
-    <Form 
+    <Form
       class="no-print"
-      @name-change="updateNameGroom($event, 'groomName')" 
-      @address1-change="updateAddress1Groom($event, 'groomAddress1')" 
+      @name-change="updateNameGroom($event, 'groomName')"
+      @address1-change="updateAddress1Groom($event, 'groomAddress1')"
       @address2-change="updateAddress2Groom($event, 'groomAddress2')"
       @address3-change="updateAddress3Groom($event, 'groomAddress3')" />
-    <Form 
+    <Form
       class="no-print"
-      @name-change="updateNameBride($event, 'brideName')" 
-      @address1-change="updateAddress1Bride($event, 'brideAddress1')" 
+      @name-change="updateNameBride($event, 'brideName')"
+      @address1-change="updateAddress1Bride($event, 'brideAddress1')"
       @address2-change="updateAddress2Bride($event, 'brideAddress2')"
       @address3-change="updateAddress3Bride($event, 'brideAddress3')" />
 
-    <div class="no-print">
-      <label for="date">DATE</label>
-      <input
-        id="date" name="date" type="date"
-        v-model="date" />
+    <form class="no-print center">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <label for="date">DATE</label>
+        <input
+          class="form-control"
+          id="date" name="date" type="date"
+          v-model="date" />
 
-      <label for="registernumber">REGISTER NUMBER</label>
-      <input 
-        id="registernumber" name="registernumber" type="text"
-        v-model="registerNumber" />
-    </div>
+        <label for="registernumber">REGISTER NUMBER</label>
+        <input
+          class="form-control" placeholder="REGISTER NUMBER"
+          id="registernumber" name="registernumber" type="text"
+          v-model="registerNumber" />
+      </div>
+    </form>
 
-    <div class="container">
+    <div class="containerd">
       <div class="centered">
         <div>
           <h1>{{ nameGroom }}</h1>
@@ -130,7 +134,7 @@ export default {
   margin-top: 60px;
 }
 
-.container {
+.containerd {
   position: relative;
   text-align: center;
   color: black;
@@ -145,8 +149,13 @@ export default {
   transform: translate(-50%, -50%);
 }
 
+h1 {
+  font-size: 26px;
+}
+
 .centered > div > h3 {
   margin: 0;
+  font-size: 24px;
 }
 
 .centered > div > h1 {
@@ -155,16 +164,27 @@ export default {
 
 .date {
   position: absolute;
-  top: 64%;
+  top: 66%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .registerNumber {
   position: absolute;
-  top: 69%;
+  top: 71%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#registernumber {
+  margin-bottom: 20px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 @page {
