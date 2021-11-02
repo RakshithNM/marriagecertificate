@@ -101,7 +101,6 @@ export default {
       }
     },
     updateNameBride(inName, inType) {
-      console.log(inName, inType);
       if(inType === 'brideName') {
         this.nameBride = inName;
       }
