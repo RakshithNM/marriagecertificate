@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ title }}</h1>
     <h2>{{ subText }}</h2>
+    <p class="no-print" style="color: red">This is a development version and in progress, only available for selected people for review</p>
   </div>
 </template>
 

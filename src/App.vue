@@ -1,23 +1,24 @@
 <template>
   <div id="app">
     <Header class="no-print" title="MARRIAGE CERTIFICATE" subText="SHREE PERNE MUCHILOT BHAGAVATHI KSHETHRA"/>
-    <p class="no-print" style="color: red">This is a developement version and in progress, only available for selected people for review</p>
     <Form
       class="no-print"
+      type="groom"
       @name-change="updateNameGroom($event, 'groomName')"
       @address1-change="updateAddress1Groom($event, 'groomAddress1')"
       @address2-change="updateAddress2Groom($event, 'groomAddress2')"
       @address3-change="updateAddress3Groom($event, 'groomAddress3')" />
     <Form
       class="no-print"
+      type="bride"
       @name-change="updateNameBride($event, 'brideName')"
       @address1-change="updateAddress1Bride($event, 'brideAddress1')"
       @address2-change="updateAddress2Bride($event, 'brideAddress2')"
       @address3-change="updateAddress3Bride($event, 'brideAddress3')" />
 
     <form class="no-print center">
-      <div class="col-md-6 col-sm-12 col-xs-12">
-        <label for="date">DATE</label>
+      <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+        <label for="date">DATE OF MARRIAGE</label>
         <input
           class="form-control"
           id="date" name="date" type="date"
@@ -39,7 +40,7 @@
           <h3>{{ address2Groom }}</h3>
           <h3>{{ address3Groom }}</h3>
         </div>
-        <h3 class="and">AND</h3>
+        <h3 class="and" v-show="nameGroom && nameBride">AND</h3>
         <div>
           <h1><strong>{{ nameBride }}</strong></h1>
           <h3>{{ address1Bride }}</h3>

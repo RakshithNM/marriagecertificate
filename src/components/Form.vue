@@ -1,9 +1,9 @@
 <template>
   <form>
-    <div class="col-md-6 col-sm-12 col-xs-12">
-      <label for="name" class="form-label">NAME</label>
+    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+      <label for="name" class="form-label">{{ type === 'groom' ? 'GROOM NAME' : 'BRIDE NAME' }}</label>
       <input
-        class="form-control" placeholder="NAME"
+        class="form-control" :placeholder="type === 'groom' ? 'GROOM NAME' : 'BRIDE NAME'"
         id="name" name="name" type="text"
         v-model="name" @input="$emit('name-change', $event.target.value)" />
 
@@ -31,6 +31,9 @@
 <script>
 export default {
   name: 'Form',
+  props: {
+    type: String
+  },
   data() {
     return {
       name: "",
