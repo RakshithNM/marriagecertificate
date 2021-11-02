@@ -81,7 +81,6 @@ export default {
   },
   methods: {
     updateNameGroom(inName, inType) {
-      console.log(inName, inType);
       if(inType === 'groomName') {
         this.nameGroom = inName;
       }
