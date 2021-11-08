@@ -21,7 +21,7 @@
         <label for="date">DATE OF MARRIAGE</label>
         <input
           class="form-control"
-          id="date" name="date" type="date"
+          id="date" name="date" type="text"
           v-model="date" />
 
         <label for="registernumber">REGISTER NUMBER</label>
