@@ -20,7 +20,7 @@
       <div class="col-md-6 col-sm-12 col-xs-12 form-group">
         <label for="date">DATE OF MARRIAGE</label>
         <input
-          class="form-control"
+          class="form-control" placeholder="YYYY-MM-DD"
           id="date" name="date" type="text"
           v-model="date" />
 
