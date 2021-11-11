@@ -45,7 +45,7 @@
         </button>
         <button
           class="update-dialog__button update-dialog__button--cancel"
-          @click="prompt = false"
+          @click="showUpgradeUI = false"
         >
           Cancel
         </button>
@@ -108,7 +108,7 @@ export default {
     }
   },
   methods: {
-    async accept() {
+    async update() {
       this.showUpgradeUI = false
       await this.$workbox.messageSW({ type: "SKIP_WAITING" });
     },
