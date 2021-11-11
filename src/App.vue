@@ -1,23 +1,29 @@
 <template>
   <div id="app">
     <Header class="no-print" title="MARRIAGE CERTIFICATE" subText="SHREE PERNE MUCHILOT BHAGAVATHI KSHETHRA"/>
-    <Form
-      class="no-print"
-      type="groom"
-      @name-change="updateNameGroom($event, 'groomName')"
-      @address1-change="updateAddress1Groom($event, 'groomAddress1')"
-      @address2-change="updateAddress2Groom($event, 'groomAddress2')"
-      @address3-change="updateAddress3Groom($event, 'groomAddress3')" />
-    <Form
-      class="no-print"
-      type="bride"
-      @name-change="updateNameBride($event, 'brideName')"
-      @address1-change="updateAddress1Bride($event, 'brideAddress1')"
-      @address2-change="updateAddress2Bride($event, 'brideAddress2')"
-      @address3-change="updateAddress3Bride($event, 'brideAddress3')" />
 
-    <form class="no-print center">
-      <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+    <div class="col-md-6 col-sm-12 col-xs-12 form-group" style="margin: auto;">
+      <Form
+        class="no-print"
+        type="groom"
+        @name-change="updateNameGroom($event, 'groomName')"
+        @address1-change="updateAddress1Groom($event, 'groomAddress1')"
+        @address2-change="updateAddress2Groom($event, 'groomAddress2')"
+        @address3-change="updateAddress3Groom($event, 'groomAddress3')" />
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-xs-12 form-group" style="margin: auto;">
+      <Form
+        class="no-print"
+        type="bride"
+        @name-change="updateNameBride($event, 'brideName')"
+        @address1-change="updateAddress1Bride($event, 'brideAddress1')"
+        @address2-change="updateAddress2Bride($event, 'brideAddress2')"
+        @address3-change="updateAddress3Bride($event, 'brideAddress3')" />
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-xs-12 form-group" style="margin: auto;">
+      <form class="no-print center">
         <label for="date">DATE OF MARRIAGE</label>
         <input
           class="form-control" placeholder="YYYY-MM-DD"
@@ -29,8 +35,8 @@
           class="form-control" placeholder="REGISTER NUMBER"
           id="registernumber" name="registernumber" type="text"
           v-model="registerNumber" />
-      </div>
-    </form>
+      </form>
+    </div>
 
     <div class="update-dialog" v-if="showUpgradeUI">
       <div class="update-dialog__content">
