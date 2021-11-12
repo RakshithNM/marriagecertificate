@@ -6,9 +6,9 @@
       :id="type === 'groom' ? 'groom-name' : 'bride-name'" name="name" type="text"
       v-model="name" @input="$emit('name-change', $event.target.value)" />
 
-    <label for="address1">ADDRESS LINE 1</label>
+    <label for="address1">FATHER AND MOTHER</label>
     <input
-      class="form-control" placeholder="ADDRESS LINE 1"
+      class="form-control" :placeholder="type === 'groom' ? 'S/O FATHER\'S NAME AND MOTHER\'S NAME' : 'D/O FATHER\'S NAME AND MOTHER\'S NAME'"
       :id="type === 'groom' ? 'groom-address1' : 'bride-address1'" name="address1" type="text"
       v-model="address1" @input="$emit('address1-change', $event.target.value)" />
 
