@@ -26,7 +26,7 @@
       <form class="no-print center">
         <label for="date">DATE OF MARRIAGE</label>
         <input
-          class="form-control" placeholder="YYYY-MM-DD"
+          class="form-control" placeholder="DD-MM-YYYY"
           id="date" name="date" type="text"
           v-model="date" />
 
