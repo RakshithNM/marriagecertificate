@@ -76,7 +76,7 @@
       </div>
       <h3 class="date">{{ date }}</h3>
       <h3 class="registerNumber">{{ registerNumber }}</h3>
-      <img src="./assets/base.jpg" alt="certificate base image" />
+      <img src="./assets/base.jpeg" alt="certificate base image" />
     </div>
   </div>
 </template>
@@ -176,6 +176,10 @@ export default {
   position: relative;
   text-align: center;
   color: black;
+  margin: 0;
+}
+
+.containerd > img {
   width: 21cm;
   height: 29.7cm;
 }
@@ -186,7 +190,7 @@ export default {
 
 .centered {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -206,14 +210,14 @@ h1 {
 
 .date {
   position: absolute;
-  top: 66%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .registerNumber {
   position: absolute;
-  top: 71%;
+  top: 77%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -248,6 +252,10 @@ input {
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden;
+  }
+
+  #app {
+    margin-top: 0;
   }
 
   .no-print, .no-print * {
