@@ -236,7 +236,7 @@ h1 {
   font-size: 13px;
   position: absolute;
   top: 86.2%;
-  left: 19.4%;
+  left: 19.5%;
   transform: translate(-50%, -50%);
 }
 
