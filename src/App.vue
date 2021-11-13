@@ -35,6 +35,12 @@
           class="form-control" placeholder="REGISTER NUMBER"
           id="registernumber" name="registernumber" type="text"
           v-model="registerNumber" />
+
+        <label for="issuedate">DATE OF CERTIFICATE ISSUE</label>
+        <input
+          class="form-control" placeholder="DD-MM-YYYY"
+          id="issue-date" name="issuedate" type="text"
+          v-model="issueDate" />
       </form>
     </div>
 
@@ -76,6 +82,7 @@
       </div>
       <h3 class="date">{{ date }}</h3>
       <h3 class="registerNumber">{{ registerNumber }}</h3>
+      <h5 class="issueDate">{{ issueDate }}</h5>
       <img src="./assets/base.jpeg" alt="certificate base image" />
     </div>
   </div>
@@ -103,6 +110,7 @@ export default {
       address3Bride: "",
       date: "",
       registerNumber: "",
+      issueDate: "",
       showUpgradeUI: false
     }
   },
@@ -177,6 +185,8 @@ export default {
   text-align: center;
   color: black;
   margin: 0;
+  width: 21cm;
+  height: 29.7cm;
 }
 
 .containerd > img {
@@ -219,6 +229,14 @@ h1 {
   position: absolute;
   top: 77%;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.issueDate {
+  font-size: 13px;
+  position: absolute;
+  top: 86.2%;
+  left: 19.4%;
   transform: translate(-50%, -50%);
 }
 
