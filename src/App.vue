@@ -44,7 +44,7 @@
 
         <label for="printbackground">Print background</label>
         <input
-          class="form-check-input" type="checkbox"
+          class="form-check-input" type="checkbox" 
           id="printbackground" name="printbackground" checked
           v-model="printBackground" />
       </form>
@@ -178,6 +178,11 @@ export default {
 </script>
 
 <style>
+:root {
+  --page-width: 21cm;
+  --page-height: 29.7cm;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -192,15 +197,15 @@ export default {
   text-align: center;
   color: black;
   margin: 0;
-  width: 21cm;
-  height: 29.7cm;
+  width: var(--page-width);
+  height: var(--page-height);
 }
 
 .containerd > #base-image {
   background-image: url("./assets/base.jpeg");
   background-size: 21cm 29.7cm;
-  width: 21cm;
-  height: 29.7cm;
+  width: var(--page-width);
+  height: var(--page-height);
 }
 
 .containerd > h3 {
@@ -271,6 +276,8 @@ input {
 
 @page {
   margin: 0;
+  width: var(--page-width);
+  height: var(--page-height);
 }
 
 @media print {
