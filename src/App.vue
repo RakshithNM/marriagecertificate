@@ -280,6 +280,13 @@ input {
   height: var(--page-height);
 }
 
+@media screen and (max-width: 768px) {
+  .containerd {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+}
+
 @media print {
   html, body {
     height: 100%;
@@ -290,6 +297,10 @@ input {
 
   #app {
     margin-top: 0;
+  }
+
+  .containerd > #base-image {
+    content: url("./assets/base.jpeg");
   }
 
   .no-print, .no-print * {
