@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ title }}</h1>
     <h2>{{ subText }}</h2>
-    <p class="no-print" style="color: red">This is a development version and in progress, only available for selected people for review</p>
+    <p class="no-print" style="color: green;">Please report any bugs to <a href="mailto:bellare545@gmail.com">bellare545@gmail.com</a></p>
   </div>
 </template>
 
