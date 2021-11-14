@@ -41,6 +41,12 @@
           class="form-control" placeholder="DD-MM-YYYY"
           id="issue-date" name="issuedate" type="text"
           v-model="issueDate" />
+
+        <label for="printbackground">Print background</label>
+        <input
+          class="form-check-input" type="checkbox"
+          id="printbackground" name="printbackground" checked
+          v-model="printBackground" />
       </form>
     </div>
 
@@ -83,7 +89,7 @@
       <h3 class="date">{{ date }}</h3>
       <h3 class="registerNumber">{{ registerNumber }}</h3>
       <h5 class="issueDate">{{ issueDate }}</h5>
-      <img src="./assets/base.jpeg" alt="certificate base image" />
+      <div v-if="printBackground" id="base-image"></div>
     </div>
   </div>
 </template>
@@ -111,7 +117,8 @@ export default {
       date: "",
       registerNumber: "",
       issueDate: "",
-      showUpgradeUI: false
+      showUpgradeUI: false,
+      printBackground: true
     }
   },
   created() {
@@ -189,7 +196,9 @@ export default {
   height: 29.7cm;
 }
 
-.containerd > img {
+.containerd > #base-image {
+  background-image: url("./assets/base.jpeg");
+  background-size: 21cm 29.7cm;
   width: 21cm;
   height: 29.7cm;
 }
